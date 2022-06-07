@@ -35,6 +35,10 @@ gem 'html2slim'
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
+  # RSpec
+  gem 'rspec-rails', '~> 5.0.0'
+  # テスト用データの作成
+  gem 'factory_bot_rails'
 end
 
 group :development do
