@@ -1,2 +1,5 @@
 h1 Races#new
 p Find me in app/views/races/new.html.slim
+- @menus.each do |menu|
+  = menu['itemName']
+  br

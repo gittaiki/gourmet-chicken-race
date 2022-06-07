@@ -31,6 +31,10 @@ gem 'bootsnap', '>= 1.4.4', require: false
 # erb→slim
 gem 'slim-rails'
 gem 'html2slim'
+# 楽天API
+gem 'rakuten_web_service'
+# 環境変数を管理
+gem 'dotenv-rails'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
