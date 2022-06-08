@@ -1,0 +1,14 @@
+h1 Races#new
+p 設定金額#{@set_price}円
+= form_with(model: @form, url: races_path, local: true) do |f|
+  = f.hidden_field :set_price, value: @set_price
+  = f.fields_for :menus do |i|
+    - @menus.each do |menu|
+      = image_tag menu['mediumImageUrls'][0]
+      = menu['itemName']
+      = i.hidden_field :name, value: menu['itemName']
+      = i.hidden_field :name, value: menu['itemPrice']
+      = i.hidden_field :name, value: menu['affiliateUrl']
+      = i.check_box :choice, { class: "form-check-input" }, true, false
+      br
+  = f.submit 'STOP!', class: "btn btn-primary"
