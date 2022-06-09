@@ -4,7 +4,7 @@ class CreateMenus < ActiveRecord::Migration[6.1]
       t.string :name
       t.integer :price
       t.string :rakuten_url
-      t.boolean :choice
+      t.boolean :choice, default: false, null: false
       t.references :race, null: false, foreign_key: true
 
       t.timestamps
