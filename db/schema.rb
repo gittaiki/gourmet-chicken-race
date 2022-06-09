@@ -19,7 +19,7 @@ ActiveRecord::Schema.define(version: 2022_06_07_124616) do
     t.string "name"
     t.integer "price"
     t.string "rakuten_url"
-    t.boolean "choice"
+    t.boolean "choice", default: false, null: false
     t.bigint "race_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
